@@ -129,26 +129,90 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(250, 250, 249, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-subtle);
-            padding: 0.75rem 2rem;
+            background: rgba(250, 250, 249, 0.55);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .toc-nav .nav-inner {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
             overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .toc-nav .nav-inner::-webkit-scrollbar { display: none; }
+
+        .toc-nav .nav-brand {
+            font-family: var(--font-sans);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            padding: 0.85rem 1.25rem 0.85rem 0.5rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+            margin-right: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .toc-nav .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0;
             white-space: nowrap;
         }
 
         .toc-nav a {
             font-family: var(--font-sans);
-            font-size: 0.78rem;
-            color: var(--text-muted);
+            font-size: 0.68rem;
+            color: rgba(90, 90, 82, 0.7);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-right: 1.5rem;
-            transition: color 0.2s;
+            letter-spacing: 1px;
+            padding: 0.9rem 0.7rem;
+            transition: all 0.25s ease;
+            position: relative;
+            flex-shrink: 0;
         }
 
-        .toc-nav a:hover { color: var(--accent-red); }
+        .toc-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 60%;
+            height: 2px;
+            background: var(--accent-red);
+            border-radius: 2px 2px 0 0;
+            transition: transform 0.25s ease;
+        }
+
+        .toc-nav a:hover {
+            color: #111;
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .toc-nav a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .toc-nav .nav-sep {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
 
         /* ===== MAIN CONTENT ===== */
         .content-wrapper {
@@ -585,8 +649,33 @@
 <!-- HERO / TITLE PAGE                                             -->
 <!-- ============================================================ -->
 <header class="hero">
-    <div class="hero-visual-placeholder">
-        <span class="placeholder-label">[ Figure 0: Hero Banner / Cover Image ]<br>Prompt file: visuals/01-hero-banner.md</span>
+    <div style="width:100%;max-width:700px;height:350px;position:relative;z-index:1;margin-bottom:3rem;border-radius:16px;overflow:hidden;background:rgba(240,239,232,0.3);">
+        <!-- Glass panel 1 -->
+        <div style="position:absolute;top:20px;left:30px;width:260px;height:180px;background:rgba(255,255,255,0.35);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.5);border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.06);transform:rotate(-3deg);display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+            <div style="text-align:center;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;margin-bottom:0.5rem;">Structural</div>
+                <div style="font-family:Georgia,serif;font-size:1.1rem;color:#1a1a1a;font-weight:700;">Subversion</div>
+            </div>
+        </div>
+        <!-- Glass panel 2 -->
+        <div style="position:absolute;top:60px;left:180px;width:280px;height:160px;background:rgba(255,255,255,0.45);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.6);border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:rotate(1.5deg);display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+            <div style="text-align:center;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:3px;color:#1e5f8a;margin-bottom:0.5rem;">Managed Illusion</div>
+                <div style="font-family:Georgia,serif;font-size:1.1rem;color:#1a1a1a;font-weight:700;">Digital Privacy</div>
+            </div>
+        </div>
+        <!-- Glass panel 3 -->
+        <div style="position:absolute;top:140px;right:40px;width:240px;height:150px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.55);border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.07);transform:rotate(-1deg);display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+            <div style="text-align:center;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:3px;color:#0f766e;margin-bottom:0.5rem;">The Panopticon</div>
+                <div style="font-family:Georgia,serif;font-size:1.1rem;color:#1a1a1a;font-weight:700;">Paradigm</div>
+            </div>
+        </div>
+        <!-- Glass panel 4 (decorative) -->
+        <div style="position:absolute;bottom:30px;left:60px;width:200px;height:100px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.4);border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.04);transform:rotate(2deg);"></div>
+        <!-- Decorative circles -->
+        <div style="position:absolute;top:15px;right:80px;width:60px;height:60px;border-radius:50%;background:rgba(185,28,28,0.06);border:1px solid rgba(185,28,28,0.1);"></div>
+        <div style="position:absolute;bottom:50px;right:120px;width:40px;height:40px;border-radius:50%;background:rgba(30,95,138,0.06);border:1px solid rgba(30,95,138,0.1);"></div>
     </div>
     <h1>The Panopticon Paradigm</h1>
     <p class="subtitle">Structural Subversion and the Controlled Illusion of Digital Privacy</p>
@@ -599,19 +688,26 @@
 <!-- STICKY NAV                                                    -->
 <!-- ============================================================ -->
 <nav class="toc-nav">
-    <a href="#preface">Preface</a>
-    <a href="#abstract">Abstract</a>
-    <a href="#introduction">I. Introduction</a>
-    <a href="#hardware">II. Hardware</a>
-    <a href="#cryptography">III. Cryptography</a>
-    <a href="#perception">IV. Perception</a>
-    <a href="#prism">V. PRISM</a>
-    <a href="#cloud">VI. Cloud</a>
-    <a href="#dissidence">VII. Dissidence</a>
-    <a href="#legislation">VIII. Legislation</a>
-    <a href="#limitations">IX. Limitations</a>
-    <a href="#conclusion">X. Conclusion</a>
-    <a href="#references">References</a>
+    <div class="nav-inner">
+        <span class="nav-brand">Panopticon</span>
+        <div class="nav-links">
+            <a href="#preface">Preface</a>
+            <a href="#abstract">Abstract</a>
+            <span class="nav-sep"></span>
+            <a href="#introduction">I</a>
+            <a href="#hardware">II</a>
+            <a href="#cryptography">III</a>
+            <a href="#perception">IV</a>
+            <a href="#prism">V</a>
+            <a href="#cloud">VI</a>
+            <a href="#dissidence">VII</a>
+            <a href="#legislation">VIII</a>
+            <a href="#limitations">IX</a>
+            <a href="#conclusion">X</a>
+            <span class="nav-sep"></span>
+            <a href="#references">Refs</a>
+        </div>
+    </div>
 </nav>
 
 <!-- ============================================================ -->
@@ -668,10 +764,56 @@
     </div>
 
     <!-- Ecosystem Overview Placeholder -->
-    <div class="visual-placeholder tall">
-        <span class="vis-label">Figure 1</span>
-        <span class="vis-title">The Managed Privacy Ecosystem: Seven Reinforcing Mechanisms</span>
-        <span class="vis-file">visuals/10-managed-privacy-ecosystem.md</span>
+    <div style="min-height:500px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 1</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">The Managed Privacy Ecosystem: Seven Reinforcing Mechanisms</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/10-managed-privacy-ecosystem.md</div>
+        </div>
+        <!-- Center label -->
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <div style="display:inline-block;background:rgba(255,255,255,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.7);border-radius:50px;padding:0.6rem 2rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+                <span style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;text-transform:uppercase;letter-spacing:4px;color:#b91c1c;font-weight:700;">MANAGED PRIVACY</span>
+            </div>
+        </div>
+        <!-- Cards grid -->
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #b91c1c;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#b91c1c;margin-bottom:0.4rem;">01</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Hardware (Ring -3)</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">Silicon-level access below OS visibility</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #c2410c;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#c2410c;margin-bottom:0.4rem;">02</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Crypto Subversion</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">Weakened standards and covert backdoors</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #92610a;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#92610a;margin-bottom:0.4rem;">03</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Legal Framework</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">FISA, NSLs, and compelled compliance</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #1e5f8a;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#1e5f8a;margin-bottom:0.4rem;">04</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Corporate Integration</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">PRISM and provider compliance</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #0f766e;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#0f766e;margin-bottom:0.4rem;">05</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Cloud Consolidation</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">IC-defined infrastructure at scale</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #6b21a8;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#6b21a8;margin-bottom:0.4rem;">06</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Perception Mgmt</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">"Going Dark" narratives and staged conflict</div>
+            </div>
+            <div style="flex:1 1 calc(33% - 1rem);min-width:160px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);border-top:3px solid #374151;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#374151;margin-bottom:0.4rem;">07</div>
+                <div style="font-family:Georgia,serif;font-size:0.9rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Controlled Opposition</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#3d3d3d;line-height:1.5;">Tor, Signal, and state-funded "alternatives"</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -690,10 +832,52 @@
     <p>In this sense, the global internet functions less as a contested space than as a digital panopticon, a system of total visibility where the observer is obscured and the observed is permanently exposed. This reality is not the product of accidental vulnerabilities. It reflects a deliberate, multi-decade strategy of structural subversion: embedding access capabilities into the mathematical standards of encryption, the administrative law of compliance, the commercial incentives of the cloud economy, and the physical silicon of processors.</p>
 
     <!-- Panopticon Concept Diagram -->
-    <div class="visual-placeholder tall">
-        <span class="vis-label">Figure 2</span>
-        <span class="vis-title">The Digital Panopticon: Concentric Layers of Structural Access</span>
-        <span class="vis-file">visuals/09-panopticon-concept-diagram.md</span>
+    <div style="min-height:500px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 2</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">The Digital Panopticon: Concentric Layers of Structural Access</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/09-panopticon-concept-diagram.md</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;min-height:400px;">
+            <div style="position:relative;width:400px;height:400px;">
+                <!-- Outer ring: Citizens -->
+                <div style="position:absolute;top:0;left:0;width:400px;height:400px;border-radius:50%;border:2px dashed rgba(0,0,0,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:#3d3d3d;background:rgba(240,239,232,0.8);padding:0 0.5rem;">THE OBSERVED / Citizens</span>
+                </div>
+                <!-- Ring 6: Perception -->
+                <div style="position:absolute;top:30px;left:30px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,0.25);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:1px solid rgba(107,33,168,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#6b21a8;background:rgba(255,255,255,0.6);padding:0 0.4rem;border-radius:4px;">Perception</span>
+                </div>
+                <!-- Ring 5: Cloud -->
+                <div style="position:absolute;top:60px;left:60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.3);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(15,118,110,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#0f766e;background:rgba(255,255,255,0.6);padding:0 0.4rem;border-radius:4px;">Cloud</span>
+                </div>
+                <!-- Ring 4: Corporate -->
+                <div style="position:absolute;top:90px;left:90px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(30,95,138,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#1e5f8a;background:rgba(255,255,255,0.6);padding:0 0.4rem;border-radius:4px;">Corporate</span>
+                </div>
+                <!-- Ring 3: Legal -->
+                <div style="position:absolute;top:120px;left:120px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,0.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(146,97,10,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:8px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#92610a;background:rgba(255,255,255,0.6);padding:0 0.4rem;border-radius:4px;">Legal</span>
+                </div>
+                <!-- Ring 2: Crypto -->
+                <div style="position:absolute;top:148px;left:148px;width:104px;height:104px;border-radius:50%;background:rgba(255,255,255,0.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(194,65,12,0.15);display:flex;align-items:flex-start;justify-content:center;padding-top:6px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.5rem;text-transform:uppercase;letter-spacing:1px;color:#c2410c;background:rgba(255,255,255,0.6);padding:0 0.3rem;border-radius:4px;">Crypto</span>
+                </div>
+                <!-- Ring 1: Hardware -->
+                <div style="position:absolute;top:170px;left:170px;width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.2);display:flex;align-items:flex-start;justify-content:center;padding-top:4px;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.4rem;text-transform:uppercase;letter-spacing:1px;color:#b91c1c;">HW</span>
+                </div>
+                <!-- Center: Observer -->
+                <div style="position:absolute;top:182px;left:182px;width:36px;height:36px;border-radius:50%;background:rgba(146,97,10,0.15);border:2px solid rgba(146,97,10,0.3);box-shadow:0 0 20px rgba(146,97,10,0.15),0 0 40px rgba(146,97,10,0.08);display:flex;align-items:center;justify-content:center;">
+                    <div style="width:10px;height:10px;border-radius:50%;background:#92610a;"></div>
+                </div>
+                <!-- Center label below -->
+                <div style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:#92610a;background:rgba(240,239,232,0.9);padding:0.2rem 0.6rem;border-radius:4px;border:1px solid rgba(146,97,10,0.15);">The Observer / State + IC</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <p>This claim is architectural rather than metaphysical. It does not require belief in omniscient surveillance, nor does it deny real technical obstacles, resource constraints, bureaucratic failures, or moments of genuine institutional conflict. Rather, it argues that the system is engineered for access even when access is imperfectly realized. Once that distinction is accepted, the policy problem changes: the locus of concern shifts from isolated "backdoors" to a surveillance ecosystem whose default settings (technical, legal, and institutional) normalize transparency to the state.</p>
@@ -703,10 +887,56 @@
     </div>
 
     <!-- Surveillance Layers Infographic -->
-    <div class="visual-placeholder tall">
-        <span class="vis-label">Figure 3</span>
-        <span class="vis-title">Surveillance Access Layers: Silicon to Perception</span>
-        <span class="vis-file">visuals/13-surveillance-layers-infographic.md</span>
+    <div style="min-height:500px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 3</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Surveillance Access Layers: Silicon to Perception</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/13-surveillance-layers-infographic.md</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <!-- Layer 7: Perception (top, cool purple) -->
+            <div style="background:rgba(107,33,168,0.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(107,33,168,0.15);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#6b21a8;text-transform:uppercase;letter-spacing:1px;">Perception</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">"Going Dark" narratives, staged conflicts</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Public consent maintained</div>
+            </div>
+            <!-- Layer 6: Opposition -->
+            <div style="background:rgba(55,65,81,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(55,65,81,0.12);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:1px;">Opposition</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">Tor, Signal as state-funded alternatives</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Dissent channeled</div>
+            </div>
+            <!-- Layer 5: Cloud -->
+            <div style="background:rgba(15,118,110,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(15,118,110,0.12);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#0f766e;text-transform:uppercase;letter-spacing:1px;">Cloud</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">IC-shaped infrastructure (C2S, JEDI)</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Data centralized</div>
+            </div>
+            <!-- Layer 4: Corporate -->
+            <div style="background:rgba(30,95,138,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(30,95,138,0.12);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#1e5f8a;text-transform:uppercase;letter-spacing:1px;">Corporate</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">PRISM, Section 702 compliance</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Access formalized</div>
+            </div>
+            <!-- Layer 3: Legal -->
+            <div style="background:rgba(146,97,10,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(146,97,10,0.12);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#92610a;text-transform:uppercase;letter-spacing:1px;">Legal</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">FISA, NSLs, gag orders</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Compulsion legalized</div>
+            </div>
+            <!-- Layer 2: Crypto -->
+            <div style="background:rgba(194,65,12,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(194,65,12,0.12);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#c2410c;text-transform:uppercase;letter-spacing:1px;">Crypto</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">Dual_EC, BULLRUN, weakened standards</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Encryption undermined</div>
+            </div>
+            <!-- Layer 1: Silicon (bottom, warm red) -->
+            <div style="background:rgba(185,28,28,0.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(185,28,28,0.15);border-radius:8px;padding:0.9rem 1.2rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.04);">
+                <div style="width:100px;flex-shrink:0;font-family:'Segoe UI',sans-serif;font-size:0.75rem;font-weight:700;color:#b91c1c;text-transform:uppercase;letter-spacing:1px;">Silicon</div>
+                <div style="flex:1;font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#3d3d3d;">Intel ME, AMD PSP, Ring -3 firmware</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;flex-shrink:0;">Hardware compromised</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -735,10 +965,50 @@
     <p>This reality collapses many popular privacy assumptions. Software-based protections, including Tor, VPNs, and end-to-end encrypted messaging, operate atop hardware that may capture data as it is processed in memory. If the CPU itself is compromised, no amount of encryption can prevent capture at the endpoint.</p>
 
     <!-- Ring Hierarchy Diagram -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 4</span>
-        <span class="vis-title">System Privilege Hierarchy: Ring 3 to Ring -3</span>
-        <span class="vis-file">visuals/02-ring-hierarchy-diagram.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 4</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">System Privilege Hierarchy: Ring 3 to Ring -3</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/02-ring-hierarchy-diagram.md</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+            <!-- Ring 3 (outermost, green) -->
+            <div style="width:100%;max-width:600px;background:rgba(15,118,110,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(15,118,110,0.15);border-radius:10px;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <div><span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#0f766e;">RING 3</span></div>
+                <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;">User Applications</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;">Unprivileged access</div>
+            </div>
+            <!-- Ring 1-2 -->
+            <div style="width:88%;max-width:530px;background:rgba(30,95,138,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(30,95,138,0.12);border-left:1px solid rgba(30,95,138,0.12);border-right:1px solid rgba(30,95,138,0.12);border-top:none;border-radius:0 0 10px 10px;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <div><span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#1e5f8a;">RING 1-2</span></div>
+                <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;">Device Drivers</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;">Kernel-adjacent</div>
+            </div>
+            <!-- Ring 0 -->
+            <div style="width:75%;max-width:450px;background:rgba(146,97,10,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(146,97,10,0.12);border-top:none;border-radius:0 0 10px 10px;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <div><span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#92610a;">RING 0</span></div>
+                <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;">OS Kernel</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;">Full system control</div>
+            </div>
+            <!-- Ring -1 -->
+            <div style="width:60%;max-width:360px;background:rgba(194,65,12,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(194,65,12,0.12);border-top:none;border-radius:0 0 10px 10px;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <div><span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#c2410c;">RING -1</span></div>
+                <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;">Hypervisor / SMM</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;">Below OS visibility</div>
+            </div>
+            <!-- Ring -2 -->
+            <div style="width:45%;max-width:270px;background:rgba(185,28,28,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(185,28,28,0.12);border-top:none;border-radius:0 0 10px 10px;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,0.03);">
+                <div><span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#b91c1c;">RING -2</span></div>
+                <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;">Intel ME / AMD PSP</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#7a7a72;">Firmware level</div>
+            </div>
+            <!-- Ring -3 (innermost, red accent) -->
+            <div style="width:32%;max-width:195px;background:rgba(185,28,28,0.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:2px solid rgba(185,28,28,0.25);border-top:none;border-radius:0 0 10px 10px;padding:0.8rem 1.2rem;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 16px rgba(185,28,28,0.08);">
+                <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;font-weight:700;color:#b91c1c;">RING -3</span>
+                <span style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;margin-top:0.2rem;">Hardware Backdoor</span>
+                <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#b91c1c;margin-top:0.1rem;">Undetectable access</span>
+            </div>
+        </div>
     </div>
 
     <!-- Table 1: System Privilege Hierarchy -->
@@ -798,10 +1068,38 @@
     </div>
 
     <!-- Probability Curve Placeholder -->
-    <div class="visual-placeholder short">
-        <span class="vis-label">Figure 5</span>
-        <span class="vis-title">Data Disclosure Probability Over Time: P(D) = 1 - e<sup>-&lambda;t</sup></span>
-        <span class="vis-file">visuals/11-disclosure-probability-curve.md</span>
+    <div style="min-height:280px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 5</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Data Disclosure Probability Over Time: P(D) = 1 - e<sup>-&#955;t</sup></div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/11-disclosure-probability-curve.md</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+            <svg viewBox="0 0 500 200" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+                <!-- Grid lines -->
+                <line x1="60" y1="20" x2="60" y2="170" stroke="#d6d3cc" stroke-width="1"/>
+                <line x1="60" y1="170" x2="480" y2="170" stroke="#d6d3cc" stroke-width="1"/>
+                <line x1="60" y1="95" x2="480" y2="95" stroke="#d6d3cc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <line x1="60" y1="20" x2="480" y2="20" stroke="#d6d3cc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <!-- Y axis labels -->
+                <text x="50" y="175" text-anchor="end" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">0</text>
+                <text x="50" y="100" text-anchor="end" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">0.5</text>
+                <text x="50" y="25" text-anchor="end" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">1.0</text>
+                <text x="15" y="100" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" fill="#3d3d3d" transform="rotate(-90,15,100)">P(D)</text>
+                <!-- X axis labels -->
+                <text x="60" y="188" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">0</text>
+                <text x="270" y="188" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">Time</text>
+                <text x="480" y="188" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" fill="#7a7a72">t</text>
+                <!-- Curve: P(D) = 1 - e^(-lambda*t), lambda=0.5 scaled -->
+                <path d="M60,170 Q120,80 180,50 Q260,28 340,23 Q400,21 480,20" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Shaded area under curve -->
+                <path d="M60,170 Q120,80 180,50 Q260,28 340,23 Q400,21 480,20 L480,170 Z" fill="rgba(185,28,28,0.06)"/>
+                <!-- Annotation -->
+                <text x="300" y="65" font-family="Consolas,monospace" font-size="11" fill="#b91c1c">P(D) = 1 - e^(-&#955;t)</text>
+                <!-- Asymptote label -->
+                <text x="420" y="15" font-family="Segoe UI,sans-serif" font-size="9" fill="#7a7a72">asymptote: P=1</text>
+            </svg>
+        </div>
     </div>
 
     <p>The analytical conclusion is blunt: privacy claims that do not confront hardware sovereignty are, at best, partial. At worst, they are theater performed on a stage already wired for recording.</p>
@@ -820,10 +1118,63 @@
     <p>State pursuit of cryptographic access is not a post-9/11 anomaly but a structural feature of modern SIGINT strategy. What changes over time is not the objective (access to protected communications) but the tactic: from overt mandates that risk political backlash, to covert subversion embedded in standards and supply chains.</p>
 
     <!-- Timeline Placeholder -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 6</span>
-        <span class="vis-title">Cryptographic Subversion Timeline: 1993 to 2013</span>
-        <span class="vis-file">visuals/03-cryptographic-subversion-timeline.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 6</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Cryptographic Subversion Timeline: 1993 to 2013</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/03-cryptographic-subversion-timeline.md</div>
+        </div>
+        <!-- Timeline line -->
+        <div style="position:relative;padding:2rem 0;">
+            <div style="position:absolute;top:50%;left:5%;right:5%;height:2px;background:linear-gradient(to right,rgba(185,28,28,0.2),rgba(185,28,28,0.4),rgba(185,28,28,0.2));transform:translateY(-50%);"></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;position:relative;padding:0 2%;">
+                <!-- Clipper 1993 -->
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:110px;margin-bottom:0.75rem;">
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#b91c1c;margin-bottom:0.3rem;">1993</div>
+                        <div style="font-family:Georgia,serif;font-size:0.82rem;color:#1a1a1a;font-weight:600;">Clipper Chip</div>
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;line-height:1.4;">Key escrow mandate</div>
+                    </div>
+                    <div style="width:10px;height:10px;border-radius:50%;background:#b91c1c;border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(185,28,28,0.3);"></div>
+                </div>
+                <!-- Export Controls 1996 -->
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                    <div style="width:10px;height:10px;border-radius:50%;background:#c2410c;border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(194,65,12,0.3);margin-bottom:0.75rem;"></div>
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:110px;">
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#c2410c;margin-bottom:0.3rem;">1996</div>
+                        <div style="font-family:Georgia,serif;font-size:0.82rem;color:#1a1a1a;font-weight:600;">Export Controls</div>
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;line-height:1.4;">Crypto as munitions</div>
+                    </div>
+                </div>
+                <!-- Dual_EC 2004 -->
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:110px;margin-bottom:0.75rem;">
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#92610a;margin-bottom:0.3rem;">2004</div>
+                        <div style="font-family:Georgia,serif;font-size:0.82rem;color:#1a1a1a;font-weight:600;">Dual_EC_DRBG</div>
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;line-height:1.4;">NIST backdoor</div>
+                    </div>
+                    <div style="width:10px;height:10px;border-radius:50%;background:#92610a;border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(146,97,10,0.3);"></div>
+                </div>
+                <!-- BULLRUN 2006 -->
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                    <div style="width:10px;height:10px;border-radius:50%;background:#1e5f8a;border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(30,95,138,0.3);margin-bottom:0.75rem;"></div>
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:110px;">
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#1e5f8a;margin-bottom:0.3rem;">2006</div>
+                        <div style="font-family:Georgia,serif;font-size:0.82rem;color:#1a1a1a;font-weight:600;">BULLRUN</div>
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;line-height:1.4;">Mass decryption</div>
+                    </div>
+                </div>
+                <!-- Snowden 2013 -->
+                <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
+                    <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.2);border-radius:10px;padding:1rem;box-shadow:0 4px 20px rgba(185,28,28,0.08);text-align:center;width:110px;margin-bottom:0.75rem;">
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:#b91c1c;margin-bottom:0.3rem;">2013</div>
+                        <div style="font-family:Georgia,serif;font-size:0.82rem;color:#1a1a1a;font-weight:600;">Snowden</div>
+                        <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;line-height:1.4;">Programs exposed</div>
+                    </div>
+                    <div style="width:10px;height:10px;border-radius:50%;background:#b91c1c;border:2px solid rgba(255,255,255,0.8);box-shadow:0 0 8px rgba(185,28,28,0.4);"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <h3>The Strategic Pivot: The Clipper Chip (1993 to 1996)</h3>
@@ -928,10 +1279,60 @@
     </ol>
 
     <!-- Going Dark Narrative Cycle -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 7</span>
-        <span class="vis-title">The "Going Dark" Perception Management Cycle</span>
-        <span class="vis-file">visuals/12-going-dark-narrative-cycle.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 7</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">The "Going Dark" Perception Management Cycle</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/12-going-dark-narrative-cycle.md</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;align-items:center;">
+            <!-- Stage 1 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#b91c1c;margin-bottom:0.3rem;">Stage 1</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">Stage Impotence</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">"We can't read their messages"</div>
+            </div>
+            <div style="font-size:1.2rem;color:#b91c1c;">&#8594;</div>
+            <!-- Stage 2 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(194,65,12,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#c2410c;margin-bottom:0.3rem;">Stage 2</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">Validate Privacy</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">"We support strong encryption"</div>
+            </div>
+            <div style="font-size:1.2rem;color:#c2410c;">&#8594;</div>
+            <!-- Stage 3 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(146,97,10,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#92610a;margin-bottom:0.3rem;">Stage 3</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">False Dichotomy</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">"Privacy vs. safety"</div>
+            </div>
+        </div>
+        <!-- Arrow row -->
+        <div style="display:flex;justify-content:center;margin:0.5rem 0;">
+            <div style="font-size:1.2rem;color:#0f766e;transform:rotate(180deg);">&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;align-items:center;">
+            <!-- Stage 6 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(107,33,168,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#6b21a8;margin-bottom:0.3rem;">Stage 6</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">Repeat</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">Cycle resets with new crisis</div>
+            </div>
+            <div style="font-size:1.2rem;color:#6b21a8;">&#8592;</div>
+            <!-- Stage 5 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(0,95,138,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#1e5f8a;margin-bottom:0.3rem;">Stage 5</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">Propose Compromise</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">"Responsible encryption"</div>
+            </div>
+            <div style="font-size:1.2rem;color:#1e5f8a;">&#8592;</div>
+            <!-- Stage 4 -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(15,118,110,0.15);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;width:130px;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.55rem;text-transform:uppercase;letter-spacing:1.5px;color:#0f766e;margin-bottom:0.3rem;">Stage 4</div>
+                <div style="font-family:Georgia,serif;font-size:0.8rem;color:#1a1a1a;font-weight:600;">Legislative Pretext</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.3rem;line-height:1.4;">Terrorism / child safety</div>
+            </div>
+        </div>
     </div>
 
     <p>Importantly, this interpretation does not require conscious coordination between Apple and the FBI. Institutional incentives suffice: Apple benefits from being seen as resisting; the FBI benefits from being seen as blocked. Both outcomes stabilize the broader architecture by sustaining belief in the drama of contested encryption.</p>
@@ -956,10 +1357,62 @@
     <p>Companies denied "direct access," but the dispute is partly semantic. Under Section 702 of FISA, providers can be compelled to facilitate data extraction. PRISM materials describe the FBI's Data Intercept Technology Unit (DITU) functioning as an intermediary, delivering selectors to providers, who then comply through dedicated compliance channels.<a href="#ref-7" class="citation">[7, 18, 19]</a> Some firms reportedly built "separate, secure portals" or digital equivalents of secure physical rooms to facilitate collection.</p>
 
     <!-- PRISM Provider Chart -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 8</span>
-        <span class="vis-title">PRISM Provider Integration Timeline and Data Scope</span>
-        <span class="vis-file">visuals/04-prism-provider-chart.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 8</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">PRISM Provider Integration Timeline and Data Scope</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/04-prism-provider-chart.md</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+            <!-- Microsoft -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#1e5f8a;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#1e5f8a;margin-bottom:0.3rem;">Joined 2007</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Microsoft</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">Email, cloud, Skype, OneDrive</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#0f766e;font-weight:700;margin-top:0.4rem;">+56%</div>
+            </div>
+            <!-- Yahoo -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#6b21a8;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#6b21a8;margin-bottom:0.3rem;">Joined 2008</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Yahoo</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">Email, search, messaging</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#0f766e;font-weight:700;margin-top:0.4rem;">+73%</div>
+            </div>
+            <!-- Google -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#0f766e;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#0f766e;margin-bottom:0.3rem;">Joined 2009</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Google</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">Gmail, Drive, YouTube, Search</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#0f766e;font-weight:700;margin-top:0.4rem;">+63%</div>
+            </div>
+            <!-- Facebook -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#c2410c;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#c2410c;margin-bottom:0.3rem;">Joined 2009</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Facebook</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">Social graph, Messenger</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#0f766e;font-weight:700;margin-top:0.4rem;">+131%</div>
+            </div>
+            <!-- Skype -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.2);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(185,28,28,0.06);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:6px;background:#b91c1c;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#b91c1c;margin-bottom:0.3rem;">Joined 2011</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Skype</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">VoIP, video, chat</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.9rem;color:#b91c1c;font-weight:700;margin-top:0.4rem;">+248%</div>
+            </div>
+            <!-- Apple -->
+            <div style="flex:1 1 calc(33% - 1rem);min-width:155px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);position:relative;overflow:hidden;">
+                <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#92610a;"></div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:#92610a;margin-bottom:0.3rem;">Joined 2012</div>
+                <div style="font-family:Georgia,serif;font-size:1rem;color:#1a1a1a;font-weight:600;margin-bottom:0.3rem;">Apple</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;color:#3d3d3d;line-height:1.5;">iCloud, iMessage, FaceTime</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.75rem;color:#0f766e;font-weight:700;margin-top:0.4rem;">+41%</div>
+            </div>
+        </div>
     </div>
 
     <!-- Table 3: PRISM Provider Integration -->
@@ -1042,10 +1495,54 @@
     <p>The implication is not simply that the intelligence community is using the cloud. It is that the intelligence community helped define the cloud's security architecture. If the NSA trusts AWS with its most sensitive workloads, it is because the infrastructure meets intelligence requirements, requirements that coexist with commercial tenancy.</p>
 
     <!-- Cloud Contracts Infographic -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 9</span>
-        <span class="vis-title">Intelligence Community Cloud Contracts: Scale and Scope</span>
-        <span class="vis-file">visuals/05-cloud-contracts-infographic.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 9</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Intelligence Community Cloud Contracts: Scale and Scope</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/05-cloud-contracts-infographic.md</div>
+        </div>
+        <div style="display:flex;align-items:flex-end;justify-content:center;gap:1.5rem;padding:1rem 0;min-height:250px;">
+            <!-- C2S -->
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:140px;">
+                <div style="width:100%;height:80px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(30,95,138,0.2);border-radius:8px 8px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:1.3rem;font-weight:700;color:#1e5f8a;">$600M</div>
+                </div>
+                <div style="width:100%;background:rgba(30,95,138,0.08);border:1px solid rgba(30,95,138,0.12);border-top:none;border-radius:0 0 8px 8px;padding:0.8rem 0.5rem;text-align:center;">
+                    <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;font-weight:600;">C2S</div>
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;">CIA / AWS</div>
+                </div>
+            </div>
+            <!-- Navy BPA -->
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:140px;">
+                <div style="width:100%;height:100px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(15,118,110,0.2);border-radius:8px 8px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:1.3rem;font-weight:700;color:#0f766e;">$724M</div>
+                </div>
+                <div style="width:100%;background:rgba(15,118,110,0.08);border:1px solid rgba(15,118,110,0.12);border-top:none;border-radius:0 0 8px 8px;padding:0.8rem 0.5rem;text-align:center;">
+                    <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;font-weight:600;">Navy BPA</div>
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;">Navy / AWS</div>
+                </div>
+            </div>
+            <!-- WildandStormy -->
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:140px;">
+                <div style="width:100%;height:170px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.2);border-radius:8px 8px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(185,28,28,0.06);">
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:1.5rem;font-weight:700;color:#b91c1c;">$10B</div>
+                </div>
+                <div style="width:100%;background:rgba(185,28,28,0.06);border:1px solid rgba(185,28,28,0.12);border-top:none;border-radius:0 0 8px 8px;padding:0.8rem 0.5rem;text-align:center;">
+                    <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;font-weight:600;">WildandStormy</div>
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;">NSA / Multi-cloud</div>
+                </div>
+            </div>
+            <!-- C2E -->
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:140px;">
+                <div style="width:100%;height:200px;background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(146,97,10,0.2);border-radius:8px 8px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(146,97,10,0.06);">
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:1.5rem;font-weight:700;color:#92610a;">Multi-B</div>
+                </div>
+                <div style="width:100%;background:rgba(146,97,10,0.06);border:1px solid rgba(146,97,10,0.12);border-top:none;border-radius:0 0 8px 8px;padding:0.8rem 0.5rem;text-align:center;">
+                    <div style="font-family:Georgia,serif;font-size:0.85rem;color:#1a1a1a;font-weight:600;">C2E</div>
+                    <div style="font-family:'Segoe UI',sans-serif;font-size:0.65rem;color:#3d3d3d;margin-top:0.2rem;">IC-wide / Multi-vendor</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Table 4: IC Cloud Contracts -->
@@ -1117,10 +1614,43 @@
     <p>Tor's public release followed the logic of "cover traffic." For intelligence officers to use the network without suspicion, they required a crowd of ordinary users. As researchers noted, "anonymity loves company."<a href="#ref-24" class="citation">[24]</a> By funding and promoting Tor through aligned institutions, including the State Department and affiliated grant mechanisms, the U.S. government effectively cultivated a global anonymity infrastructure that helps provide concealment for its own operations.</p>
 
     <!-- Tor Funding Pie Chart -->
-    <div class="visual-placeholder short">
-        <span class="vis-label">Figure 10</span>
-        <span class="vis-title">Tor Project Funding Sources (2024): Who Pays for "Privacy"?</span>
-        <span class="vis-file">visuals/06-tor-funding-pie-chart.md</span>
+    <div style="min-height:280px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 10</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Tor Project Funding Sources (2024): Who Pays for "Privacy"?</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/06-tor-funding-pie-chart.md</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;">
+            <!-- Pie chart -->
+            <div style="width:180px;height:180px;border-radius:50%;background:conic-gradient(#b91c1c 0deg 126deg, #1e5f8a 126deg 190.8deg, #374151 190.8deg 270deg, #0f766e 270deg 324deg, #92610a 324deg 360deg);box-shadow:0 8px 32px rgba(0,0,0,0.08);position:relative;">
+                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;">
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;color:#3d3d3d;font-weight:600;">2024</span>
+                </div>
+            </div>
+            <!-- Legend -->
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:14px;height:14px;border-radius:3px;background:#b91c1c;"></div>
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#1a1a1a;">State Dept - 35%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:14px;height:14px;border-radius:3px;background:#1e5f8a;"></div>
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#1a1a1a;">OTF - 18%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:14px;height:14px;border-radius:3px;background:#374151;"></div>
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#1a1a1a;">Corporate - 22%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:14px;height:14px;border-radius:3px;background:#0f766e;"></div>
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#1a1a1a;">Individual - 15%</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <div style="width:14px;height:14px;border-radius:3px;background:#92610a;"></div>
+                    <span style="font-family:'Segoe UI',sans-serif;font-size:0.78rem;color:#1a1a1a;">Other - 10%</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Table: Tor Funding -->
@@ -1169,10 +1699,38 @@
     <p>"No-logs" marketing claims have repeatedly collapsed under court orders and enforcement disclosures. The consolidation of VPN providers under Kape Technologies (formerly Crossrider) illustrates the structural risk: Kape, an Israeli-linked company with ties to Unit 8200 circles and roots in adware distribution, owns several prominent VPN brands.<a href="#ref-39" class="citation">[39, 40, 41]</a> When "privacy" infrastructure is owned by intelligence-adjacent capital, the service should be evaluated as part of the surveillance economy, not outside it.</p>
 
     <!-- VPN No-Logs Failure Infographic -->
-    <div class="visual-placeholder medium">
-        <span class="vis-label">Figure 11</span>
-        <span class="vis-title">The "No-Logs" Failure Record: Marketing vs. Enforcement Reality</span>
-        <span class="vis-file">visuals/07-vpn-nologs-failure-table.md</span>
+    <div style="min-height:380px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 11</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">The "No-Logs" Failure Record: Marketing vs. Enforcement Reality</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/07-vpn-nologs-failure-table.md</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <!-- HideMyAss -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.12);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="font-family:Georgia,serif;font-size:0.95rem;color:#1a1a1a;font-weight:600;margin-bottom:0.6rem;">HideMyAss</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#0f766e;margin-bottom:0.3rem;font-weight:600;">CLAIMED: Zero Logs</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#b91c1c;font-weight:600;">REALITY: Provided logs to FBI in LulzSec case (2011)</div>
+            </div>
+            <!-- PureVPN -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.12);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="font-family:Georgia,serif;font-size:0.95rem;color:#1a1a1a;font-weight:600;margin-bottom:0.6rem;">PureVPN</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#0f766e;margin-bottom:0.3rem;font-weight:600;">CLAIMED: Zero Logs</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#b91c1c;font-weight:600;">REALITY: IP logs used in FBI cyberstalking arrest (2017)</div>
+            </div>
+            <!-- IPVanish -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.12);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="font-family:Georgia,serif;font-size:0.95rem;color:#1a1a1a;font-weight:600;margin-bottom:0.6rem;">IPVanish</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#0f766e;margin-bottom:0.3rem;font-weight:600;">CLAIMED: Zero Logs</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#b91c1c;font-weight:600;">REALITY: Shared connection logs with DHS (2016)</div>
+            </div>
+            <!-- EarthVPN -->
+            <div style="background:rgba(255,255,255,0.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(185,28,28,0.12);border-radius:10px;padding:1.2rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);">
+                <div style="font-family:Georgia,serif;font-size:0.95rem;color:#1a1a1a;font-weight:600;margin-bottom:0.6rem;">EarthVPN</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#0f766e;margin-bottom:0.3rem;font-weight:600;">CLAIMED: Zero Logs</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#b91c1c;font-weight:600;">REALITY: Server logs led to arrest via Dutch police</div>
+            </div>
+        </div>
     </div>
 
     <!-- Table: VPN No-Logs Failures -->
@@ -1236,10 +1794,29 @@
     <p>National Security Letters allow the FBI to compel disclosure of data without judicial oversight, often accompanied by gag orders preventing providers from acknowledging the request.<a href="#ref-57" class="citation">[57, 58]</a> This creates a parallel legal system: administrative subpoenas that operate in darkness, where disclosure of the mechanism itself becomes legally risky.</p>
 
     <!-- NSL Metrics Chart -->
-    <div class="visual-placeholder short">
-        <span class="vis-label">Figure 12</span>
-        <span class="vis-title">Metrics of Stealth: NSL and Section 702 Query Trends</span>
-        <span class="vis-file">visuals/08-nsl-metrics-chart.md</span>
+    <div style="min-height:280px;border-radius:12px;padding:2rem;background:rgba(240,239,232,0.5);border:1px solid rgba(0,0,0,0.06);position:relative;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-family:'Segoe UI',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:3px;color:#b91c1c;">Figure 12</span>
+            <div style="font-family:Georgia,serif;font-size:1.05rem;color:#1a1a1a;margin-top:0.3rem;font-weight:600;">Metrics of Stealth: NSL and Section 702 Query Trends</div>
+            <div style="font-family:'Consolas',monospace;font-size:0.7rem;color:#7a7a72;margin-top:0.25rem;">visuals/08-nsl-metrics-chart.md</div>
+        </div>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <!-- Metric 1 -->
+            <div style="flex:1;min-width:160px;max-width:220px;background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;border-top:4px solid #b91c1c;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:2.4rem;font-weight:700;color:#b91c1c;line-height:1;">22%</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#3d3d3d;margin-top:0.6rem;line-height:1.4;">Increase in NSL requests year-over-year</div>
+            </div>
+            <!-- Metric 2 -->
+            <div style="flex:1;min-width:160px;max-width:220px;background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;border-top:4px solid #1e5f8a;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:2.4rem;font-weight:700;color:#1e5f8a;line-height:1;">98%</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#3d3d3d;margin-top:0.6rem;line-height:1.4;">NSL gag orders upheld without judicial review</div>
+            </div>
+            <!-- Metric 3 -->
+            <div style="flex:1;min-width:160px;max-width:220px;background:rgba(255,255,255,0.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.5);border-radius:10px;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.05);text-align:center;border-top:4px solid #0f766e;">
+                <div style="font-family:'Segoe UI',sans-serif;font-size:2rem;font-weight:700;color:#0f766e;line-height:1;">39% to 57%</div>
+                <div style="font-family:'Segoe UI',sans-serif;font-size:0.72rem;color:#3d3d3d;margin-top:0.6rem;line-height:1.4;">Section 702 query volume growth range</div>
+            </div>
+        </div>
     </div>
 
     <!-- Table: NSL Metrics -->
