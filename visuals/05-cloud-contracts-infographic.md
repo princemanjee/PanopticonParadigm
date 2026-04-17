@@ -7,7 +7,9 @@ An infographic showing the escalating scale of cloud computing contracts between
 Section 6: Cloud Consolidation as Architectural Convergence - positioned alongside the discussion of the C2S, WildandStormy, C2E, and Navy BPA contracts.
 
 ## Gemini Image Generation Prompt
-A vertical infographic on a dark background (#0f1923) showing four major Intelligence Community cloud contracts as ascending blocks or pillars, arranged from left to right in chronological order, with each successive contract visually larger to convey escalating scale:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A vertical infographic on a dark background (#0f1923) showing four major Intelligence Community cloud contracts as ascending frosted glass blocks or pillars, arranged from left to right in chronological order, with each successive contract visually larger to convey escalating scale:
 
 CONTRACT 1 (leftmost, smallest):
 Block labeled "C2S" (Commercial Cloud Services)
@@ -49,11 +51,12 @@ Above the blocks, add a trend line or arrow showing the trajectory of spending, 
 
 Below the blocks, add a conceptual layer showing the dual-use nature: a split diagram where the top half shows "Intelligence Workloads (classified)" and the bottom half shows "Consumer Services (commercial)" both running on the same cloud infrastructure, separated by a thin dashed line labeled "Logical separation only."
 
-Style: Clean, modern infographic. Dark theme. Strong visual hierarchy. Professional, academic quality.
+Style: Glassmorphism infographic. Dark theme with frosted glass panels, translucent layers, backdrop blur, subtle luminous borders, and floating depth composition. Strong visual hierarchy. Professional, academic quality.
 
 ## Specifications
 - Dimensions: 1400 x 1100 pixels (portrait-leaning landscape)
-- Style: Infographic, data visualization, architectural
+- Style: Glassmorphism - infographic, data visualization, architectural with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0f1923), teal (#00695c), orange (#e65100), red (#b71c1c), navy (#1a237e), white text (#ffffff), accent gold (#ffd54f)
 - Format: PNG
 - Notes: The key visual message is escalation - each contract is larger and broader than the last. The dual-use infrastructure concept at the bottom is critical for conveying the merger of commercial and intelligence systems. Dollar amounts must be prominently displayed.
+- Glassmorphism Rendering: Contract blocks should be rendered as frosted glass pillars with translucent fills and backdrop blur. The dual-use split diagram should use frosted glass panels at different depth planes. Borders should be subtle and luminous. Soft diffused shadows behind panels create visible depth.

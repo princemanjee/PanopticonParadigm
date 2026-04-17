@@ -7,7 +7,9 @@ A hybrid bar/line chart visualizing key surveillance compliance and privacy brea
 Section 4: Legal Architecture as Access Infrastructure - alongside the discussion of FISA Section 702, National Security Letters, and oversight limitations.
 
 ## Gemini Image Generation Prompt
-A professional data visualization on a dark background (#0d1117) combining bar charts and line charts in a dashboard-style layout with three panels:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A professional data visualization on a dark background (#0d1117) combining bar charts and line charts in a glassmorphism dashboard-style layout with three frosted glass panels, each floating at different depth planes with translucent fills, backdrop blur, and subtle luminous borders:
 
 PANEL 1 - LEFT (Bar Chart): "NSL Requests Targeting U.S. Persons"
 A bar chart showing the percentage of National Security Letter requests targeting U.S. persons over time:
@@ -34,11 +36,12 @@ A large percentage display: "22%" in bold red (#ef4444) text
 At the bottom, spanning all three panels, add a summary bar:
 "These metrics are drawn from the Intelligence Community's own oversight and compliance reports. They represent the system working as designed, not anomalies."
 
-Style: Dashboard-style data visualization. Clean, minimal. Dark theme with high contrast data elements. Professional, suitable for academic publication. Sans-serif typography throughout.
+Style: Glassmorphism dashboard-style data visualization with frosted glass panels, translucent layers, backdrop blur, subtle luminous borders, and floating depth composition. Clean, minimal. Dark theme with high contrast data elements. Professional, suitable for academic publication. Sans-serif typography throughout.
 
 ## Specifications
 - Dimensions: 1600 x 800 pixels (wide landscape)
-- Style: Data dashboard, hybrid chart, metrics display
+- Style: Glassmorphism - data dashboard, hybrid chart, metrics display with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0d1117), blue bars (#3b82f6), amber warning (#f59e0b), red alerts (#ef4444), green compliance (#22c55e), white text (#e6edf3), panel borders (#30363d)
 - Format: PNG
 - Notes: The key insight is that these numbers come from the IC's own reports, not adversarial sources. The 98% compliance rate should be presented ambiguously, as the paper argues this demonstrates rubber-stamp oversight rather than genuine protection. The rising U.S. persons percentage shows mission creep from foreign targets to domestic surveillance.
+- Glassmorphism Rendering: Each dashboard panel should be a frosted glass card with backdrop blur and translucent fill. Chart bars and the donut chart should use translucent color fills. Panels float at different depth planes with soft diffused shadows. Borders should be subtle and luminous.

@@ -7,7 +7,9 @@ A comparison infographic documenting cases where VPN providers who marketed "no 
 Section 7: Perception Management and Controlled Opposition - positioned after the discussion of VPN marketing claims versus operational reality.
 
 ## Gemini Image Generation Prompt
-A comparison infographic on a dark background (#0f172a) structured as four case study cards arranged in a 2x2 grid, each documenting a VPN provider that claimed "no logs" but was caught logging:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A comparison infographic on a dark background (#0f172a) structured as four frosted glass case study cards arranged in a 2x2 grid, each card rendered with translucent fills, backdrop blur, and subtle luminous borders, each documenting a VPN provider that claimed "no logs" but was caught logging:
 
 CARD 1 - TOP LEFT:
 Header: "PureVPN" with a red warning icon
@@ -47,11 +49,12 @@ Below the four cards, add a summary banner in amber/gold (#f59e0b):
 
 Add a small visual element showing a shield icon cracking apart, symbolizing the failure of marketed privacy guarantees.
 
-Style: Clean card-based layout. High contrast between green (claim) and red (reality). Professional, evidence-based, academic. No sensationalism, just documented facts.
+Style: Glassmorphism card-based layout with frosted glass panels, translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. High contrast between green (claim) and red (reality). Professional, evidence-based, academic. No sensationalism, just documented facts.
 
 ## Specifications
 - Dimensions: 1400 x 1200 pixels (slightly portrait)
-- Style: Comparison infographic, card layout, evidence-based
+- Style: Glassmorphism - comparison infographic, card layout, evidence-based with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0f172a), green claims (#22c55e), red reality (#ef4444), amber summary (#f59e0b), white text (#f8fafc), card backgrounds (#1e293b)
 - Format: PNG
 - Notes: Each case is documented in public court records and news reporting. The green-to-red visual pattern (claim vs. reality) must be immediately legible. The point is not to attack individual companies but to demonstrate that "no logs" is a marketing category, not a technical or legal guarantee.
+- Glassmorphism Rendering: Each case study card should be a frosted glass panel with backdrop blur and translucent fill. Cards should float at slightly different depth planes with soft diffused shadows. The summary banner should also be a frosted glass element. Borders should be subtle and luminous.

@@ -7,7 +7,9 @@ A vertically stacked infographic showing all surveillance access layers from the
 Section 8: Synthesis / Conclusion - or as a reference figure that ties together all sections of the paper.
 
 ## Gemini Image Generation Prompt
-A tall, vertically stacked infographic on a dark background (#0a0e1a) showing seven surveillance access layers as horizontal bands, stacked from bottom to top like geological strata or a technology stack diagram. Each layer is a distinct colored band with a label, mechanism description, and outcome:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A tall, vertically stacked infographic on a dark background (#0a0e1a) showing seven surveillance access layers as frosted glass horizontal bands, stacked from bottom to top like geological strata or a technology stack diagram. Each layer should be rendered as a translucent glass panel with backdrop blur, subtle luminous borders, and visible depth separation. Each layer is a distinct colored band with a label, mechanism description, and outcome:
 
 LAYER 1 (bottom, foundation):
 Label: "SILICON LAYER"
@@ -69,11 +71,12 @@ On the left side, add a vertical arrow running the full height of the stack, poi
 
 At the very bottom, below Layer 1, add a small text block: "Full-stack surveillance: redundant access at every layer. Compromise at any single layer is sufficient. Compromise at all layers is the current architecture."
 
-Style: Stacked geological/technology stack diagram. Clean horizontal bands with clear typography. Dark theme. Each layer visually distinct. Professional, academic, suitable for publication.
+Style: Glassmorphism stacked geological/technology stack diagram with frosted glass layers, translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. Clean horizontal bands with clear typography. Dark theme. Each layer visually distinct. Professional, academic, suitable for publication.
 
 ## Specifications
 - Dimensions: 1000 x 1600 pixels (tall portrait)
-- Style: Stacked layers infographic, technology stack diagram
+- Style: Glassmorphism - stacked layers infographic, technology stack diagram with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0a0e1a), layer colors as specified from deep red to dark purple, white text (#e2e8f0), arrow labels in amber (#fbbf24)
 - Format: PNG
 - Notes: The vertical stacking is deliberate - it mirrors how technology stacks are conventionally depicted, making the metaphor immediately legible to technical audiences. Each layer must be clearly separated and independently readable. The dual arrows on left and right convey the inverse relationship between public visibility and surveillance depth.
+- Glassmorphism Rendering: Each stacked layer should be a frosted glass band with backdrop blur and translucent fill, allowing lower layers to show through with blur. Layers should float at different depth planes with soft diffused shadows between them. Borders should be subtle and luminous. The overall effect should create visible depth in the stack.

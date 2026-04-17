@@ -7,7 +7,9 @@ A horizontal timeline charting the evolution of state cryptographic subversion f
 Section 3: Cryptographic Subversion - spanning the full width of the section, positioned after the introductory paragraphs about the tactical pivot.
 
 ## Gemini Image Generation Prompt
-A horizontal timeline infographic spanning from 1993 to 2013, designed with a "going underground" visual metaphor. The timeline is divided into two zones separated by a horizontal ground-level line:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A horizontal timeline infographic spanning from 1993 to 2013, designed with a "going underground" visual metaphor. All event markers and information panels should be rendered as frosted glass cards with translucent fills, backdrop blur, and subtle luminous borders. The timeline is divided into two zones separated by a horizontal ground-level line:
 
 ABOVE GROUND (1993-1999) - labeled "Overt Mandates (Public Domain)":
 The background above ground is a lighter slate blue (#2c3e50). Events appear as upward-facing markers with clear labels:
@@ -29,11 +31,12 @@ The background below ground shifts to deep dark red-black (#1a0a0a). Events appe
 
 Between events, show connecting lines that physically descend deeper underground as time progresses. Add subtle digital noise and circuit patterns in the underground layer. A small legend: "Above = Public policy battles. Below = Covert infrastructure compromise."
 
-Style: Dark, dramatic infographic. Clean typography. Professional academic quality. No decorative clutter.
+Style: Glassmorphism - dark, dramatic infographic with frosted glass panels, translucent layers, backdrop blur, subtle luminous borders, and floating depth composition. Clean typography. Professional academic quality.
 
 ## Specifications
 - Dimensions: 1800 x 800 pixels (wide landscape)
-- Style: Infographic timeline, dramatic, layered
+- Style: Glassmorphism - infographic timeline, dramatic, with frosted glass panels, translucent layers, backdrop blur, and floating depth composition
 - Color Palette: Above ground - slate blue (#2c3e50), steel gray (#7f8c8d). Below ground - deep crimson-black (#1a0a0a), dark red (#5c1a1a). Accent colors: amber (#f39c12) for markers, white (#ffffff) for text
 - Format: PNG
 - Notes: The "going underground" metaphor is the key visual concept. The physical descent of the timeline communicates the shift from public debate to covert sabotage. The Snowden marker erupting back above ground creates a powerful visual climax. All text must be legible at web display sizes.
+- Glassmorphism Rendering: Event markers should be frosted glass cards floating at different depth planes. The above-ground and below-ground zones should use translucent fills with backdrop blur. Borders should be subtle and luminous. Soft diffused shadows behind panels create visible depth.

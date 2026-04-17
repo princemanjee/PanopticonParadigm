@@ -7,7 +7,9 @@ A circular/cycle diagram showing how the "Going Dark" narrative functions as a p
 Section 7: Perception Management - alongside the analysis of the "Going Dark" narrative as strategic theater rather than genuine capability limitation.
 
 ## Gemini Image Generation Prompt
-A circular cycle diagram on a dark background (#0f0f1a) showing six stages of the "Going Dark" perception management loop, arranged clockwise around a central hub:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A circular cycle diagram on a dark background (#0f0f1a) showing six stages of the "Going Dark" perception management loop, arranged clockwise around a central hub. Each stage node should be rendered as a frosted glass panel with translucent fills, backdrop blur, and subtle luminous borders:
 
 CENTRAL HUB:
 A dark circle at the center labeled "THE 'GOING DARK' CYCLE" with subtitle "Perpetual perception management loop." Color: dark charcoal (#1a1a2e) with a faint amber border (#d97706). Inside the hub, show a small theater mask icon, symbolizing performance.
@@ -53,11 +55,12 @@ Thick curved arrows connecting each stage to the next in clockwise order. The ar
 
 Add a small annotation outside the cycle at the bottom: "Meanwhile, at all times: NSA maintains BULLRUN ($250M/yr), hardware access via Ring -3, legal access via 702/NSLs, and corporate access via PRISM. The 'darkness' is performed, not real."
 
-Style: Clean cycle diagram. Professional. Dark theme. Nodes should be rounded rectangles or circles with clear labels. The circular flow must be immediately legible.
+Style: Glassmorphism cycle diagram with frosted glass nodes, translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. Professional. Dark theme. Nodes should be frosted glass rounded rectangles or circles with clear labels. The circular flow must be immediately legible.
 
 ## Specifications
 - Dimensions: 1300 x 1300 pixels (square)
-- Style: Cycle diagram, process flow, conceptual
+- Style: Glassmorphism - cycle diagram, process flow, conceptual with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0f0f1a), node colors as specified (indigo through red spectrum), connection arrows in light gray (#94a3b8) with color gradients, white text (#f1f5f9), amber center border (#d97706)
 - Format: PNG
 - Notes: The circular nature is essential - this is a perpetual loop, not a linear process. The "Meanwhile" annotation at the bottom provides the critical context that the entire cycle is theater. Stage descriptions should be concise but specific enough to convey the mechanism. The theater mask in the center reinforces the performance metaphor.
+- Glassmorphism Rendering: Each stage node should be a frosted glass panel with backdrop blur and translucent fill. The central hub should also be frosted glass. Nodes should float at different depth planes with soft diffused shadows. Connection arrows should appear to pass between glass layers. Borders should be subtle and luminous.

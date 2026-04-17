@@ -7,7 +7,9 @@ A conceptual diagram mapping the paper's central thesis onto the panopticon mode
 Section 1: Introduction / Thesis Statement - or as a standalone conceptual figure referenced throughout the paper. Could also serve as a secondary hero image.
 
 ## Gemini Image Generation Prompt
-A conceptual diagram viewed from above, showing a modern digital panopticon structure as concentric circles on a dark background (#0a0a14):
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A conceptual diagram viewed from above, showing a modern digital panopticon structure as concentric frosted glass circles on a dark background (#0a0a14). Each ring should be rendered as a translucent glass layer with backdrop blur, subtle luminous borders, and visible depth separation:
 
 CENTER - THE OBSERVER:
 A solid dark core circle representing the state and Intelligence Community. Labeled "The Observer: State / IC." Inside this circle, show subtle iconography: an eye symbol, satellite dishes, server racks. The center glows with a faint amber light (#f59e0b), symbolizing total visibility outward. Color: dark charcoal (#1c1c1c) with amber glow.
@@ -37,11 +39,12 @@ Add radiating lines from the center outward through all rings to the observed, r
 
 Add a small legend: "All layers are structurally permeable to the observer. Privacy exists as perception, not architecture."
 
-Style: Architectural diagram meets conceptual art. Clean, symmetrical, academic. Dark and authoritative. Minimal decorative elements.
+Style: Glassmorphism architectural diagram meets conceptual art. Frosted glass layers with translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. Clean, symmetrical, academic. Dark and authoritative.
 
 ## Specifications
 - Dimensions: 1200 x 1200 pixels (square)
-- Style: Conceptual diagram, architectural, academic
+- Style: Glassmorphism - conceptual diagram, architectural, academic with frosted glass layers, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0a0a14), center amber glow (#f59e0b), rings gradient from deep red (#7f1d1d) through orange (#92400e) and teal (#134e4a) to blue-gray (#1e293b), white text (#e2e8f0), dashed lines for illusory walls (#475569)
 - Format: PNG
 - Notes: This is the paper's signature visual. The key concept is that every ring is permeable to the center observer, but appears solid from the outside. The dashed/transparent walls of the citizen cells are critical - they must look solid at first glance but reveal their transparency on closer inspection. The radiating lines of access passing unimpeded through all layers are essential.
+- Glassmorphism Rendering: Each concentric ring should be a frosted glass layer with backdrop blur and translucent fill, allowing inner rings to show through with blur. The citizen cell walls should be rendered as frosted glass panels. Soft diffused shadows between layers create visible depth. Borders should be subtle and luminous.

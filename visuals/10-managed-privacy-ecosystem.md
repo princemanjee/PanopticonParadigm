@@ -7,7 +7,9 @@ A systems diagram showing how all seven mechanisms of managed privacy identified
 Section 8: Synthesis / Conclusion - as the capstone visual demonstrating the interconnected nature of all seven mechanisms.
 
 ## Gemini Image Generation Prompt
-A systems diagram on a dark background (#0b0d17) showing seven nodes arranged in a circular layout, connected by directional arrows representing feedback loops and dependencies:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A systems diagram on a dark background (#0b0d17) showing seven frosted glass nodes arranged in a circular layout, connected by directional arrows representing feedback loops and dependencies. Each node should be rendered as a frosted glass panel with translucent fills, backdrop blur, and subtle luminous borders:
 
 NODE 1 - HARDWARE SUBVERSION (top, 12 o'clock position):
 Hexagonal node colored deep red (#b91c1c). Labeled "1. Hardware Subversion" with subtitle "Ring -3: Intel ME, AMD PSP." Icon: a microchip.
@@ -45,11 +47,12 @@ CENTER of the circle: A larger central node or emblem labeled "MANAGED PRIVACY: 
 
 Show the feedback loops with curved arrows. Use thicker arrows for primary dependencies and thinner arrows for reinforcing feedback. Add a subtle animated-look glow around the connections to suggest active data flow.
 
-Style: Clean systems diagram. Node-and-edge layout. Professional, academic. Dark theme with high contrast nodes.
+Style: Glassmorphism systems diagram with frosted glass nodes, translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. Node-and-edge layout. Professional, academic. Dark theme with high contrast nodes.
 
 ## Specifications
 - Dimensions: 1400 x 1400 pixels (square)
-- Style: Systems diagram, network graph, academic
+- Style: Glassmorphism - systems diagram, network graph, academic with frosted glass nodes, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#0b0d17), node colors as specified above per mechanism, connection arrows in light gray (#94a3b8), feedback arrows in amber (#f59e0b), white text (#f1f5f9)
 - Format: PNG
 - Notes: The feedback loops are the most important element. The diagram must show that these seven mechanisms are not independent but form a self-reinforcing system. The central "Managed Privacy" label ties everything to the paper's thesis. Arrow labels must be legible. Consider using slight curvature on arrows to avoid visual clutter where lines cross.
+- Glassmorphism Rendering: Each hexagonal node should be a frosted glass panel with backdrop blur and translucent fill. The central hub should also be frosted glass. Nodes should float at different depth planes with soft diffused shadows. Connection arrows should appear to pass between depth layers. Borders should be subtle and luminous.

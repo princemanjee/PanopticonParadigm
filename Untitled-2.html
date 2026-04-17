@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +10,20 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a2e;
-            --bg-card-alt: #16213e;
-            --text-primary: #e0e0e8;
-            --text-secondary: #a0a0b8;
-            --text-muted: #6c6c80;
-            --accent-red: #e63946;
-            --accent-blue: #457b9d;
-            --accent-teal: #2a9d8f;
-            --accent-gold: #e9c46a;
-            --accent-orange: #f4a261;
-            --border-subtle: #2a2a3e;
-            --border-accent: #3a3a5e;
+            --bg-primary: #fafaf9;
+            --bg-secondary: #f5f5f0;
+            --bg-card: #f0efe8;
+            --bg-card-alt: #e8e7e0;
+            --text-primary: #1a1a1a;
+            --text-secondary: #3d3d3d;
+            --text-muted: #7a7a72;
+            --accent-red: #b91c1c;
+            --accent-blue: #1e5f8a;
+            --accent-teal: #0f766e;
+            --accent-gold: #92610a;
+            --accent-orange: #c2410c;
+            --border-subtle: #d6d3cc;
+            --border-accent: #b8b5ad;
             --font-serif: 'Georgia', 'Times New Roman', serif;
             --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             --font-mono: 'Consolas', 'Courier New', monospace;
@@ -49,7 +50,7 @@
             align-items: center;
             text-align: center;
             padding: 4rem 2rem;
-            background: linear-gradient(180deg, #050510 0%, #0a0a1a 40%, #12121e 100%);
+            background: linear-gradient(180deg, #e8e6df 0%, #f0efe8 40%, #fafaf9 100%);
             overflow: hidden;
         }
 
@@ -58,8 +59,8 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(230, 57, 70, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 50%, rgba(69, 123, 157, 0.08) 0%, transparent 50%);
+                radial-gradient(ellipse at 20% 50%, rgba(185, 28, 28, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(30, 95, 138, 0.04) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -73,7 +74,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 3rem;
-            background: rgba(26, 26, 46, 0.5);
+            background: rgba(240, 239, 232, 0.6);
             position: relative;
             z-index: 1;
         }
@@ -91,7 +92,7 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 0.75rem;
-            color: #fff;
+            color: #111;
             position: relative;
             z-index: 1;
             max-width: 800px;
@@ -129,11 +130,11 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(10, 10, 18, 0.6);
+            background: rgba(250, 250, 249, 0.55);
             backdrop-filter: blur(20px) saturate(1.4);
             -webkit-backdrop-filter: blur(20px) saturate(1.4);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
             padding: 0;
             overflow: hidden;
         }
@@ -159,7 +160,7 @@
             letter-spacing: 2px;
             white-space: nowrap;
             padding: 0.85rem 1.25rem 0.85rem 0.5rem;
-            border-right: 1px solid rgba(255, 255, 255, 0.06);
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
             margin-right: 0.25rem;
             flex-shrink: 0;
         }
@@ -174,7 +175,7 @@
         .toc-nav a {
             font-family: var(--font-sans);
             font-size: 0.68rem;
-            color: rgba(160, 160, 184, 0.7);
+            color: rgba(90, 90, 82, 0.7);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -198,8 +199,8 @@
         }
 
         .toc-nav a:hover {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.04);
+            color: #111;
+            background: rgba(0, 0, 0, 0.03);
         }
 
         .toc-nav a:hover::after {
@@ -210,7 +211,7 @@
             width: 3px;
             height: 3px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
         }
 
@@ -243,12 +244,12 @@
             font-size: 1.9rem;
             font-weight: 700;
             line-height: 1.3;
-            color: #fff;
+            color: #111;
         }
 
         .section-header .section-subtitle {
             font-size: 1rem;
-            color: var(--text-secondary);
+            color: var(--text-muted);
             font-style: italic;
             margin-top: 0.3rem;
         }
@@ -300,7 +301,7 @@
 
         /* ===== KEY INSIGHT BOXES ===== */
         .key-insight {
-            background: linear-gradient(135deg, rgba(230, 57, 70, 0.08), rgba(69, 123, 157, 0.08));
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.04), rgba(30, 95, 138, 0.04));
             border: 1px solid var(--border-accent);
             border-radius: 8px;
             padding: 1.5rem 2rem;
@@ -372,7 +373,7 @@
         }
 
         tbody tr:hover {
-            background: rgba(69, 123, 157, 0.06);
+            background: rgba(30, 95, 138, 0.04);
         }
 
         tbody td {
@@ -382,7 +383,7 @@
         }
 
         tbody tr:nth-child(even) {
-            background: rgba(26, 26, 46, 0.3);
+            background: rgba(240, 239, 232, 0.5);
         }
 
         .table-source {
@@ -403,7 +404,7 @@
             align-items: center;
             justify-content: center;
             margin: 2rem 0;
-            background: rgba(26, 26, 46, 0.3);
+            background: rgba(240, 239, 232, 0.4);
             padding: 2rem;
             text-align: center;
         }
@@ -454,7 +455,7 @@
         .equation-box .equation {
             font-family: var(--font-mono);
             font-size: 1.5rem;
-            color: var(--accent-gold);
+            color: var(--accent-red);
             margin-bottom: 1rem;
         }
 
@@ -472,7 +473,7 @@
             border-left: 3px solid var(--accent-teal);
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
-            background: rgba(42, 157, 143, 0.05);
+            background: rgba(15, 118, 110, 0.04);
             border-radius: 0 6px 6px 0;
         }
 
@@ -507,12 +508,12 @@
             text-decoration: none;
         }
 
-        .citation:hover { color: var(--accent-gold); }
+        .citation:hover { color: var(--accent-red); }
 
         /* ===== COUNTERARGUMENT BOX ===== */
         .counterargument {
-            background: rgba(233, 196, 106, 0.05);
-            border: 1px solid rgba(233, 196, 106, 0.2);
+            background: rgba(146, 97, 10, 0.04);
+            border: 1px solid rgba(146, 97, 10, 0.2);
             border-radius: 8px;
             padding: 1.5rem 2rem;
             margin: 1.5rem 0;
@@ -537,7 +538,7 @@
 
         .references h2 {
             font-size: 1.5rem;
-            color: #fff;
+            color: #111;
             margin-bottom: 1.5rem;
         }
 
@@ -552,7 +553,7 @@
             font-size: 0.8rem;
             color: var(--text-secondary);
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(42, 42, 62, 0.4);
+            border-bottom: 1px solid rgba(214, 211, 204, 0.6);
             line-height: 1.6;
         }
 
@@ -637,11 +638,8 @@
         }
 
         @media print {
-            body { background: #fff; color: #111; }
             .toc-nav { display: none; }
-            .hero { min-height: auto; padding: 2rem; background: #fff; }
-            .hero h1 { color: #111; }
-            .section-header h2 { color: #111; }
+            .hero { min-height: auto; padding: 2rem; }
             .visual-placeholder { border-color: #ccc; }
         }
     </style>
@@ -652,7 +650,7 @@
 <!-- HERO / TITLE PAGE                                             -->
 <!-- ============================================================ -->
 <header class="hero">
-    <div style="width: 100%; max-width: 700px; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); margin-bottom: 3rem; position: relative; z-index: 1;">
+    <div style="width: 100%; max-width: 700px; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); margin-bottom: 3rem; position: relative; z-index: 1;">
         <img src="visuals/01-Gemini_Generated_Image_gsrfb6gsrfb6gsrf.png" alt="The Panopticon Paradigm" style="width: 100%; height: auto; display: block;">
     </div>
     <h1>The Panopticon Paradigm</h1>
@@ -741,11 +739,11 @@
         </div>
     </div>
 
-    <!-- Ecosystem Overview Placeholder -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
+    <!-- Ecosystem Overview -->
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
         <img src="visuals/10-Gemini_Generated_Image_8kbu6l8kbu6l8kbu.png" alt="The Managed Privacy Ecosystem" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 1 - The Managed Privacy Ecosystem
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 1 - The Managed Privacy Ecosystem: Seven Reinforcing Mechanisms
         </div>
     </div>
 </section>
@@ -765,10 +763,10 @@
     <p>In this sense, the global internet functions less as a contested space than as a digital panopticon, a system of total visibility where the observer is obscured and the observed is permanently exposed. This reality is not the product of accidental vulnerabilities. It reflects a deliberate, multi-decade strategy of structural subversion: embedding access capabilities into the mathematical standards of encryption, the administrative law of compliance, the commercial incentives of the cloud economy, and the physical silicon of processors.</p>
 
     <!-- Panopticon Concept Diagram -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
         <img src="visuals/09-Gemini_Generated_Image_f9mz9ff9mz9ff9mz.png" alt="The Digital Panopticon" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 2 - The Digital Panopticon
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 2 - The Digital Panopticon: Concentric Layers of Structural Access
         </div>
     </div>
 
@@ -779,10 +777,10 @@
     </div>
 
     <!-- Surveillance Layers Infographic -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
         <img src="visuals/13-Gemini_Generated_Image_amf4tsamf4tsamf4.png" alt="Surveillance Access Layers" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 3 - Surveillance Access Layers
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 3 - Surveillance Access Layers: Silicon to Perception
         </div>
     </div>
 </section>
@@ -812,10 +810,10 @@
     <p>This reality collapses many popular privacy assumptions. Software-based protections, including Tor, VPNs, and end-to-end encrypted messaging, operate atop hardware that may capture data as it is processed in memory. If the CPU itself is compromised, no amount of encryption can prevent capture at the endpoint.</p>
 
     <!-- Ring Hierarchy Diagram -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/02-Gemini_Generated_Image_gm5s6pgm5s6pgm5s.png" alt="Ring Hierarchy" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 4 - System Privilege Hierarchy
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/02-Gemini_Generated_Image_gm5s6pgm5s6pgm5s.png" alt="System Privilege Hierarchy" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 4 - System Privilege Hierarchy: Ring 3 to Ring -3
         </div>
     </div>
 
@@ -875,10 +873,10 @@
         </div>
     </div>
 
-    <!-- Probability Curve Placeholder -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/11-Gemini_Generated_Image_61x3s361x3s361x3.png" alt="Disclosure Probability Curve" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
+    <!-- Disclosure Probability Curve -->
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/11-Gemini_Generated_Image_61x3s361x3s361x3.png" alt="Data Disclosure Probability Over Time" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
             Figure 5 - Data Disclosure Probability Over Time
         </div>
     </div>
@@ -898,11 +896,11 @@
 
     <p>State pursuit of cryptographic access is not a post-9/11 anomaly but a structural feature of modern SIGINT strategy. What changes over time is not the objective (access to protected communications) but the tactic: from overt mandates that risk political backlash, to covert subversion embedded in standards and supply chains.</p>
 
-    <!-- Timeline Placeholder -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
+    <!-- Cryptographic Subversion Timeline -->
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
         <img src="visuals/03-Gemini_Generated_Image_otmcwyotmcwyotmc.png" alt="Cryptographic Subversion Timeline" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 6 - Cryptographic Subversion Timeline
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 6 - Cryptographic Subversion Timeline: 1993 to 2013
         </div>
     </div>
 
@@ -1008,9 +1006,9 @@
     </ol>
 
     <!-- Going Dark Narrative Cycle -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/12-Gemini_Generated_Image_em27f3em27f3em27.png" alt="Going Dark Narrative Cycle" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/12-Gemini_Generated_Image_em27f3em27f3em27.png" alt="The Going Dark Perception Management Cycle" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
             Figure 7 - The Going Dark Perception Management Cycle
         </div>
     </div>
@@ -1037,10 +1035,10 @@
     <p>Companies denied "direct access," but the dispute is partly semantic. Under Section 702 of FISA, providers can be compelled to facilitate data extraction. PRISM materials describe the FBI's Data Intercept Technology Unit (DITU) functioning as an intermediary, delivering selectors to providers, who then comply through dedicated compliance channels.<a href="#ref-7" class="citation">[7, 18, 19]</a> Some firms reportedly built "separate, secure portals" or digital equivalents of secure physical rooms to facilitate collection.</p>
 
     <!-- PRISM Provider Chart -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/04-Gemini_Generated_Image_i441n6i441n6i441.png" alt="PRISM Provider Integration" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 8 - PRISM Provider Integration Timeline
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/04-Gemini_Generated_Image_i441n6i441n6i441.png" alt="PRISM Provider Integration Timeline" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 8 - PRISM Provider Integration Timeline and Data Scope
         </div>
     </div>
 
@@ -1124,10 +1122,10 @@
     <p>The implication is not simply that the intelligence community is using the cloud. It is that the intelligence community helped define the cloud's security architecture. If the NSA trusts AWS with its most sensitive workloads, it is because the infrastructure meets intelligence requirements, requirements that coexist with commercial tenancy.</p>
 
     <!-- Cloud Contracts Infographic -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/05-Gemini_Generated_Image_ie99p9ie99p9ie99.png" alt="Cloud Contracts Infographic" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 9 - Intelligence Community Cloud Contracts
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/05-Gemini_Generated_Image_ie99p9ie99p9ie99.png" alt="Intelligence Community Cloud Contracts" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 9 - Intelligence Community Cloud Contracts: Scale and Scope
         </div>
     </div>
 
@@ -1200,10 +1198,10 @@
     <p>Tor's public release followed the logic of "cover traffic." For intelligence officers to use the network without suspicion, they required a crowd of ordinary users. As researchers noted, "anonymity loves company."<a href="#ref-24" class="citation">[24]</a> By funding and promoting Tor through aligned institutions, including the State Department and affiliated grant mechanisms, the U.S. government effectively cultivated a global anonymity infrastructure that helps provide concealment for its own operations.</p>
 
     <!-- Tor Funding Pie Chart -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
         <img src="visuals/06-Gemini_Generated_Image_rmjcayrmjcayrmjc.png" alt="Tor Project Funding Sources" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 10 - Tor Project Funding Sources
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 10 - Tor Project Funding Sources (2024): Who Pays for Privacy?
         </div>
     </div>
 
@@ -1253,10 +1251,10 @@
     <p>"No-logs" marketing claims have repeatedly collapsed under court orders and enforcement disclosures. The consolidation of VPN providers under Kape Technologies (formerly Crossrider) illustrates the structural risk: Kape, an Israeli-linked company with ties to Unit 8200 circles and roots in adware distribution, owns several prominent VPN brands.<a href="#ref-39" class="citation">[39, 40, 41]</a> When "privacy" infrastructure is owned by intelligence-adjacent capital, the service should be evaluated as part of the surveillance economy, not outside it.</p>
 
     <!-- VPN No-Logs Failure Infographic -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/07-Gemini_Generated_Image_s4tixss4tixss4ti.png" alt="VPN No-Logs Failure Record" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 11 - The No-Logs Failure Record
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/07-Gemini_Generated_Image_s4tixss4tixss4ti.png" alt="The No-Logs Failure Record" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 11 - The No-Logs Failure Record: Marketing vs. Enforcement Reality
         </div>
     </div>
 
@@ -1321,10 +1319,10 @@
     <p>National Security Letters allow the FBI to compel disclosure of data without judicial oversight, often accompanied by gag orders preventing providers from acknowledging the request.<a href="#ref-57" class="citation">[57, 58]</a> This creates a parallel legal system: administrative subpoenas that operate in darkness, where disclosure of the mechanism itself becomes legally risky.</p>
 
     <!-- NSL Metrics Chart -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/08-Gemini_Generated_Image_vqsxn7vqsxn7vqsx.png" alt="NSL and Section 702 Metrics" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
-            Figure 12 - NSL and Section 702 Query Trends
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/08-Gemini_Generated_Image_vqsxn7vqsxn7vqsx.png" alt="NSL and Section 702 Query Trends" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
+            Figure 12 - Metrics of Stealth: NSL and Section 702 Query Trends
         </div>
     </div>
 
@@ -1432,9 +1430,9 @@
     <p>In this environment, the only stable privacy is not a feature but a refusal: silence, minimization, and structural redesign. Yet even that refusal is increasingly modeled, inferred, and profiled by AI-driven analytics.</p>
 
     <!-- Reform Framework Diagram -->
-    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center;">
-        <img src="visuals/14-Gemini_Generated_Image_prtihuprtihuprti.png" alt="Reform Framework" style="width: 100%; height: auto; display: block;">
-        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #a0a0b8; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(255,255,255,0.06);">
+    <div style="margin: 2rem 0; border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.5); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.08); text-align: center;">
+        <img src="visuals/14-Gemini_Generated_Image_prtihuprtihuprti.png" alt="The Four Pillars of Meaningful Privacy Reform" style="width: 100%; height: auto; display: block;">
+        <div style="padding: 0.75rem 1.5rem; font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #7a7a72; text-transform: uppercase; letter-spacing: 1.5px; border-top: 1px solid rgba(0,0,0,0.06);">
             Figure 13 - The Four Pillars of Meaningful Privacy Reform
         </div>
     </div>

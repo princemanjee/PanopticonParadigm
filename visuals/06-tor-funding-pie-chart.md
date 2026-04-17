@@ -7,7 +7,9 @@ A pie chart showing the breakdown of Tor Project funding sources for fiscal year
 Section 7: Perception Management and Controlled Opposition - alongside the discussion of Tor's state funding and structural dependency.
 
 ## Gemini Image Generation Prompt
-A professional pie chart on a dark background (#111827) showing the Tor Project's 2024 funding breakdown. The chart should be large and clearly segmented with the following slices:
+Render in a glassmorphism aesthetic throughout: use frosted glass panels with backdrop blur effects, semi-transparent layers with visible depth, subtle light borders that catch highlights, soft diffused shadows behind panels, and a layered floating composition with elements at different depth planes. Use translucent fills rather than solid colors for all major surfaces.
+
+A professional pie chart on a dark background (#111827) showing the Tor Project's 2024 funding breakdown. Each pie slice should be rendered with translucent, frosted glass fills and subtle luminous borders. Callout boxes and annotations should appear as frosted glass panels floating at different depth planes with backdrop blur. The chart should be large and clearly segmented with the following slices:
 
 SLICE 1 - U.S. State Department (DRL): 35% ($2.6 Million)
 - Color: Deep red (#dc2626)
@@ -33,11 +35,12 @@ Add a secondary annotation or text block below: "Total 2024 Revenue: ~$7.4 Milli
 
 In the corner, add a small conceptual icon: a privacy shield with a government seal watermark behind it, symbolizing the controlled opposition dynamic.
 
-Style: Clean, professional pie chart. Dark theme. High contrast. Academic publication quality. Clear labels and percentages on each slice.
+Style: Glassmorphism pie chart. Dark theme with frosted glass slices, translucent fills, backdrop blur, subtle luminous borders, and floating depth composition. High contrast. Academic publication quality. Clear labels and percentages on each slice.
 
 ## Specifications
 - Dimensions: 1200 x 1000 pixels (nearly square, slightly portrait)
-- Style: Data visualization, pie chart, annotated infographic
+- Style: Glassmorphism - data visualization, pie chart, annotated infographic with frosted glass panels, translucent fills, backdrop blur, and floating depth composition
 - Color Palette: Dark background (#111827), red (#dc2626), orange-red (#ea580c), teal (#0d9488), blue (#2563eb), gray (#6b7280), white text (#f9fafb)
 - Format: PNG
 - Notes: The irony must be visually obvious without being editorially heavy-handed. The pulled-out State Department slice and the combined government funding bar do the rhetorical work. Data is drawn from the Tor Project's published 2024 financial disclosures. All percentages should be clearly labeled.
+- Glassmorphism Rendering: Pie slices should use frosted glass with translucent fills and subtle luminous borders. The summary bar and annotation boxes should be frosted glass panels with backdrop blur floating at different depth planes. Soft diffused shadows behind panels create visible depth.
